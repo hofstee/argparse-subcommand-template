@@ -8,6 +8,14 @@ parser = argparse.ArgumentParser()
 subparser = parser.add_subparsers()
 
 
+# We can add any arguments that should be present for all subcommands
+# at the top-level
+parser.add_argument(
+    "--global-arg",
+    default="This is a global argument shared across subcommands"
+)
+
+
 # Automatically create a command named after each submodule in our
 # `scripts` module
 for importer, modname, ispkg in pkgutil.iter_modules(scripts.__path__):

@@ -1,6 +1,7 @@
 # We call this function to do anything related to the `bar` subcommand
 def bar(args):
     print(f"test2={args.test2}")
+    print(f"--global-arg: {args.global_arg}")
 
 
 # Define our subparser for `foo`
